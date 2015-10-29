@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Thors_Thursday" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +16,92 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Doubler!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhM-xy-gar">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Num" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMv-xq-Y7M">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jgJ-ZE-baO">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yf2-aL-EB9">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Double It!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doubleIt:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aI7-OJ-2ub"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jgJ-ZE-baO" firstAttribute="leading" secondItem="EMv-xq-Y7M" secondAttribute="trailing" constant="39" id="3vB-mC-lFK"/>
+                            <constraint firstItem="nhM-xy-gar" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="179" id="6vL-03-1bL"/>
+                            <constraint firstItem="nhM-xy-gar" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="18" id="B1C-g0-WXJ"/>
+                            <constraint firstItem="EMv-xq-Y7M" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="28" id="KVX-On-JkN"/>
+                            <constraint firstItem="nhM-xy-gar" firstAttribute="leading" secondItem="yf2-aL-EB9" secondAttribute="leading" id="QmF-j1-ew1"/>
+                            <constraint firstItem="EMv-xq-Y7M" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="83" id="Zfk-Et-MyO"/>
+                            <constraint firstItem="jgJ-ZE-baO" firstAttribute="top" secondItem="nhM-xy-gar" secondAttribute="bottom" constant="40" id="bV1-uv-hWU"/>
+                            <constraint firstItem="jgJ-ZE-baO" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="wmo-k4-QmH"/>
+                            <constraint firstItem="yf2-aL-EB9" firstAttribute="top" secondItem="jgJ-ZE-baO" secondAttribute="bottom" constant="64" id="xFG-lZ-Gug"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="nhM-xy-gar"/>
+                                <exclude reference="EMv-xq-Y7M"/>
+                                <exclude reference="jgJ-ZE-baO"/>
+                                <exclude reference="yf2-aL-EB9"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="KVX-On-JkN"/>
+                                <exclude reference="Zfk-Et-MyO"/>
+                                <exclude reference="3vB-mC-lFK"/>
+                                <exclude reference="bV1-uv-hWU"/>
+                                <exclude reference="wmo-k4-QmH"/>
+                                <exclude reference="6vL-03-1bL"/>
+                                <exclude reference="B1C-g0-WXJ"/>
+                                <exclude reference="QmF-j1-ew1"/>
+                                <exclude reference="xFG-lZ-Gug"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="nhM-xy-gar"/>
+                                <include reference="EMv-xq-Y7M"/>
+                                <include reference="jgJ-ZE-baO"/>
+                                <include reference="yf2-aL-EB9"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="KVX-On-JkN"/>
+                                <include reference="Zfk-Et-MyO"/>
+                                <include reference="3vB-mC-lFK"/>
+                                <include reference="bV1-uv-hWU"/>
+                                <include reference="wmo-k4-QmH"/>
+                                <include reference="6vL-03-1bL"/>
+                                <include reference="B1C-g0-WXJ"/>
+                                <include reference="QmF-j1-ew1"/>
+                                <include reference="xFG-lZ-Gug"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="numTF" destination="jgJ-ZE-baO" id="5yo-ZJ-ZIR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="379.5" y="429"/>
         </scene>
     </scenes>
 </document>

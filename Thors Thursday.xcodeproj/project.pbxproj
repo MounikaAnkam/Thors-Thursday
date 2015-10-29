@@ -36,6 +36,7 @@
 		12B3EDC91A7A8C8A00B052F6 /* Thors ThursdayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thors ThursdayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B3EDCE1A7A8C8A00B052F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12B3EDCF1A7A8C8A00B052F6 /* Thors_ThursdayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thors_ThursdayTests.swift; sourceTree = "<group>"; };
+		12B3EDD91A7A98B500B052F6 /* String Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "String Playground.playground"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +60,7 @@
 		12B3EDAB1A7A8C8A00B052F6 = {
 			isa = PBXGroup;
 			children = (
+				12B3EDD91A7A98B500B052F6 /* String Playground.playground */,
 				12B3EDB61A7A8C8A00B052F6 /* Thors Thursday */,
 				12B3EDCC1A7A8C8A00B052F6 /* Thors ThursdayTests */,
 				12B3EDB51A7A8C8A00B052F6 /* Products */,
